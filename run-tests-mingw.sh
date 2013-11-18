@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MAKE_FLAGS=-j1
-CMAKE=../libs/cmake-2.8.11.2-win32-x86/bin/cmake.exe
+CMAKE=../../libs/cmake-2.8.11.2-win32-x86/bin/cmake.exe
 
 # $1:    build folder
 # $2:    C-compiler
@@ -23,8 +23,7 @@ function run_test
 }
 
 run_test build-g++-4.8 /mingw/bin/gcc /mingw/bin/g++ ""
-# crashes, see http://sourceforge.net/p/mingw/bugs/2067/
-# run_test build-g++-4.8-c++11 /mingw/bin/gcc /mingw/bin/g++ "-DCPP11:STRING=YES"
+run_test build-g++-4.8-c++11 /mingw/bin/gcc /mingw/bin/g++ "-DCPP11:STRING=YES"
 
 run_test build-clang-3.3 /mingw/bin/clang /mingw/bin/clang++ ""
 run_test build-clang-3.3-c++11 /mingw/bin/clang /mingw/bin/clang++ "-DCPP11:STRING=YES"

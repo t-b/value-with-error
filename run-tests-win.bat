@@ -1,4 +1,4 @@
-SET CMAKE="..\libs\cmake-2.8.11.2-win32-x86\bin\cmake.exe"
+SET CMAKE="..\..\libs\cmake-2.8.11.2-win32-x86\bin\cmake.exe"
 SET SOL=unit-test.sln
 SET PROJ=unit-test
 SET CONF=Release
@@ -38,6 +38,7 @@ setlocal
   cd ..
 endlocal
 
+rem VC11 needs a fresh cmd shell otherwise cmake fails
 setlocal
   mkdir build-vc11
   cd build-vc11
