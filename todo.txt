@@ -1,0 +1,4 @@
+-simplify math formulas and tune for accurate FP-arithmetic
+-use noexcept(...) for some functions, see https://groups.google.com/d/msg/comp.lang.c++.moderated/Ca2rITEpwXg/mXvaf-dZZPAJ
+-more move support does not make sense as we need in 99% of the cases the contents of value and error more than once, so we
+ can't move away from them.

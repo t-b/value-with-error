@@ -1,0 +1,32 @@
+Common:
+  mkdir build
+  cd build
+
+Windows:
+  ../libs/cmake-2.8.8-win32/bin/cmake .. 
+  make
+
+Linux with GCC:
+  cmake ..
+  make
+
+Linux with LLVM:
+  export CC=/usr/bin/clang
+  export CXX=/usr/bin/clang++
+  cmake  ..
+  make
+
+Linux with LLVM and scan-build:
+  Instead of make call
+  scan-build make
+
+Compile with C++11:
+ cmake -DCPP11:STRING=YES ..
+
+Execute tests:
+  make check
+
+Create code coverage report:
+ cmake -DCOVERAGE:STRING=YES -L ..
+ make coverage
+ firefox coverage/index.html
